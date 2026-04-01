@@ -1,4 +1,4 @@
-module github.com/slavka/another-less
+module github.com/incu6us/another-less
 
 go 1.25.7
 

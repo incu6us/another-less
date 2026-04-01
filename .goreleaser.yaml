@@ -30,7 +30,7 @@ builds:
       - -s -w
       - -X 'main.version={{ .Tag }}'
       - -X 'main.commit={{ .Commit }}'
-      - -X 'main.sourceURL=https://github.com/slavka/another-less'
+      - -X 'main.sourceURL=https://github.com/incu6us/another-less'
       - -X 'main.goVersion={{ .Env.GO_VERSION }}'
 
 archives:
@@ -48,14 +48,14 @@ checksum:
 changelog:
   disable: true
 
-brews:
+homebrew_casks:
   - name: aless
     repository:
-      owner: slavka
+      owner: incu6us
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
-    directory: Formula
-    homepage: "https://github.com/slavka/another-less"
+    directory: Casks
+    homepage: "https://github.com/incu6us/another-less"
     description: "TUI pager for exploring and analyzing tabular data"
     license: "MIT"
     test: |

@@ -8,8 +8,8 @@ import (
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/slavka/another-less/internal/ingest"
-	"github.com/slavka/another-less/internal/search"
+	"github.com/incu6us/another-less/internal/ingest"
+	"github.com/incu6us/another-less/internal/search"
 )
 
 type mode int

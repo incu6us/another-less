@@ -1,5 +1,11 @@
 # aless (another less)
 
+[![CI](https://github.com/incu6us/another-less/actions/workflows/ci.yml/badge.svg)](https://github.com/incu6us/another-less/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/incu6us/another-less)](https://github.com/incu6us/another-less/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/incu6us/another-less)](https://goreportcard.com/report/github.com/incu6us/another-less)
+[![Go Reference](https://pkg.go.dev/badge/github.com/incu6us/another-less.svg)](https://pkg.go.dev/github.com/incu6us/another-less)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A TUI pager for exploring and analyzing tabular data -- excel for your logs.
 
 Pipe in any data (CSV, TSV, JSON, logs, command output) and aless infers the structure, letting you filter, sort, pivot, search, and reshape interactively with vi-like keybindings.
@@ -8,8 +14,16 @@ Inspired by [nothing-less](https://github.com/mpryor/nothing-less), rewritten in
 
 ## Install
 
+### Homebrew
+
 ```bash
-go install github.com/slavka/another-less/cmd/aless@latest
+brew install incu6us/tap/aless
+```
+
+### Go
+
+```bash
+go install github.com/incu6us/another-less/cmd/aless@latest
 ```
 
 Or build from source:

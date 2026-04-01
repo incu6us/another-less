@@ -7,14 +7,14 @@ import (
 	tea "github.com/charmbracelet/bubbletea"
 	flag "github.com/spf13/pflag"
 
-	"github.com/slavka/another-less/internal/app"
-	"github.com/slavka/another-less/internal/ingest"
+	"github.com/incu6us/another-less/internal/app"
+	"github.com/incu6us/another-less/internal/ingest"
 )
 
 var (
 	version   = "dev"
 	commit    = "none"
-	sourceURL = "https://github.com/slavka/another-less"
+	sourceURL = "https://github.com/incu6us/another-less"
 	goVersion = "unknown"
 )
 

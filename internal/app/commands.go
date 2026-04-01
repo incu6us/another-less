@@ -2,7 +2,7 @@ package app
 
 import (
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/slavka/another-less/internal/ingest"
+	"github.com/incu6us/another-less/internal/ingest"
 )
 
 // waitForLines returns a tea.Cmd that waits for the next batch of lines from the reader.
