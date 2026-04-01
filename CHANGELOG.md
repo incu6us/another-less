@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/incu6us/another-less/compare/v1.0.1...v1.0.2) (2026-04-01)
+
+
+### Bug Fixes
+
+* alignment ([583df50](https://github.com/incu6us/another-less/commit/583df5011beb66cbb1032eaeb3d485f9d6ddae0d))
+
 ## [1.0.1](https://github.com/incu6us/another-less/compare/v1.0.0...v1.0.1) (2026-04-01)
 
 
