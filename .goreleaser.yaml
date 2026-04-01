@@ -1,0 +1,62 @@
+version: 2
+
+project_name: aless
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - binary: aless
+    main: ./cmd/aless
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+      - arm
+    goarm:
+      - "7"
+    ignore:
+      - goos: darwin
+        goarch: arm
+      - goos: windows
+        goarch: arm
+    ldflags:
+      - -s -w
+      - -X 'main.version={{ .Tag }}'
+      - -X 'main.commit={{ .Commit }}'
+      - -X 'main.sourceURL=https://github.com/slavka/another-less'
+      - -X 'main.goVersion={{ .Env.GO_VERSION }}'
+
+archives:
+  - formats:
+      - tar.gz
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}"
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+
+checksum:
+  name_template: "checksums.txt"
+
+changelog:
+  disable: true
+
+brews:
+  - name: aless
+    repository:
+      owner: slavka
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: Formula
+    homepage: "https://github.com/slavka/another-less"
+    description: "TUI pager for exploring and analyzing tabular data"
+    license: "MIT"
+    test: |
+      assert_match version.to_s, shell_output("#{bin}/aless --version")

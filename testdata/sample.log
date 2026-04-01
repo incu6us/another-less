@@ -1,0 +1,10 @@
+2024-01-15 10:23:45.123 INFO  [main] Application started
+2024-01-15 10:23:45.456 DEBUG [auth] Loading configuration from /etc/app/config.yaml
+2024-01-15 10:23:46.001 INFO  [http] Server listening on :8080
+2024-01-15 10:23:47.234 WARN  [db] Connection pool running low: 3/10 available
+2024-01-15 10:23:48.567 ERROR [auth] Failed to validate token: expired
+2024-01-15 10:23:49.890 INFO  [http] GET /api/users 200 12ms
+2024-01-15 10:23:50.123 INFO  [http] POST /api/login 401 5ms
+2024-01-15 10:23:51.456 DEBUG [cache] Cache hit for key: user:1234
+2024-01-15 10:23:52.789 ERROR [db] Query timeout after 30s: SELECT * FROM orders WHERE status='pending'
+2024-01-15 10:23:53.012 INFO  [http] GET /api/orders 200 45ms
