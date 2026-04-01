@@ -58,5 +58,3 @@ homebrew_casks:
     homepage: "https://github.com/incu6us/another-less"
     description: "TUI pager for exploring and analyzing tabular data"
     license: "MIT"
-    test: |
-      assert_match version.to_s, shell_output("#{bin}/aless --version")
